@@ -1,5 +1,5 @@
 package Tehtava1;
-
+//esta calse ereda de tille se llama camino
 public class RoadTile extends Tile {
 
     @Override

@@ -1,6 +1,6 @@
 package Tehtava1;
 
-
+//esta clase hereda de la clase map i dedide como creal tile
 public class CityMap extends Map {
     public CityMap(int rows, int cols) {
         super(rows, cols);

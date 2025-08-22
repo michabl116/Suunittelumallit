@@ -1,5 +1,5 @@
 package Tehtava1;
-
+//esta clase hereda de tile  es pantano
 public class SwampTile extends Tile {
 
     @Override

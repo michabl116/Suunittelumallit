@@ -1,5 +1,5 @@
 package Tehtava1;
-
+//esta clase hereda de la clece map y deside como creara  tile  Se llama desierto
 public class WildernessMap extends Map {
     public WildernessMap(int rows, int cols) {
         super(rows, cols);

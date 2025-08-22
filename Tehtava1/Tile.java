@@ -1,8 +1,8 @@
 package Tehtava1;
 
- abstract public class Tile {
-     abstract public String getType();
-     abstract public char getCharacter();
+public abstract class Tile {
+      public abstract String getType();
+      public abstract char getCharacter();
 
 
 

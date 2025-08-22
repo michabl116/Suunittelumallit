@@ -1,5 +1,5 @@
 package Tehtava1;
-
+//esta clase hereda de tile
 public class ForestTile extends  Tile{
     @Override
     public String getType() {
