@@ -1,7 +1,8 @@
-package Tehtava2;
+package Tehtava2.textfield;
 
-public class BTextField extends TextField{
+public class BTextField extends TextField {
     public BTextField(String text) {
+
         super(text);
     }
 

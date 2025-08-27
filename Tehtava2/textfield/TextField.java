@@ -1,4 +1,4 @@
-package Tehtava2;
+package Tehtava2.textfield;
 
 public abstract class TextField {
     protected  String text;

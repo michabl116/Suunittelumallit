@@ -1,24 +1,30 @@
 package Tehtava2;
 
+import Tehtava2.Factory.AFactory;
+import Tehtava2.Factory.UIFactory;
+import Tehtava2.button.Button;
+import Tehtava2.checkbox.Checkbox;
+import Tehtava2.textfield.TextField;
+
 public class Main {
     public static void main(String[] args) {
-        // Cambia entre AFactory y BFactory para probar estilos
+
         UIFactory factory = new AFactory();
 
-        Button button = factory.createButton("Aceptar");
-        TextField textField = factory.createTextfield("Usuario");
-        Checkbox checkbox = factory.createCheckbox("Recordarme");
-
+        Button button = factory.createButton("Enter");
+        TextField textField = factory.createTextfield("Username");
+        Checkbox checkbox = factory.createCheckbox("F");
+        System.out.println("\n---AFactory---\n");
         button.display();
         textField.display();
         checkbox.display();
 
-        // Cambiar texto dinámicamente
-        button.setText("Enviar");
-        textField.setText("Nombre");
-        checkbox.setText("Acepto términos");
 
-        System.out.println("\n--- Después de cambiar el texto ---\n");
+        button.setText("Hyväksyä");
+        textField.setText("Maksuehdot");
+        checkbox.setText("Hyväksyn ehdot");
+
+        System.out.println("\n---------\n");
 
         button.display();
         textField.display();

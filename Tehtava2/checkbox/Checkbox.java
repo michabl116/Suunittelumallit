@@ -1,16 +1,15 @@
-package Tehtava2;
+package Tehtava2.checkbox;
 
-public abstract class Button {
+public abstract class Checkbox {
     protected String text;
 
-    public Button(String text) {
+    public Checkbox(String text) {
 
         this.text = text;
     }
     public void setText(String text) {
+
         this.text = text;
-
-
     }
     public abstract void display();
 

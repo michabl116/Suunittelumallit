@@ -1,7 +1,8 @@
-package Tehtava2;
+package Tehtava2.checkbox;
 
 public class BCheckbox extends Checkbox {
     public BCheckbox(String text) {
+
         super(text);
     }
 
