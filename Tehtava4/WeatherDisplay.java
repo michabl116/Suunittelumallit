@@ -6,6 +6,7 @@ public class WeatherDisplay implements Observer{
         this.name=name;
     }
     public void update(float temperature){
-        System.out.printf("%s: Temperatura actual: %f\n",name,temperature);
+        //temperatura actual
+        System.out.printf("%s: Current temperature : %.1f°C%n",name,temperature);
     }
 }

@@ -2,7 +2,7 @@ package Tehtava4;
 
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
-
+//esto represonta al sujeto
 public class WeatherStation implements Subject, Runnable {
     private List<Observer> observers = new ArrayList<>();
     private float temperature;
@@ -11,7 +11,7 @@ public class WeatherStation implements Subject, Runnable {
     private boolean running = true;
 
     public WeatherStation() {
-        // Temperatura inicial aleatoria entre MIN y MAX
+        // Temperatura inicial aleatoria entre MIN y MAX (conbstructor)
         this.temperature = ThreadLocalRandom.current().nextFloat() * (MAX_TEMP - MIN_TEMP) + MIN_TEMP;
     }
 
@@ -26,6 +26,7 @@ public class WeatherStation implements Subject, Runnable {
             if (temperature > MAX_TEMP) temperature = MAX_TEMP;
             if (temperature < MIN_TEMP) temperature = MIN_TEMP;
 
+            //notifia a alos onbserbadores
             notifyObservers();
 
             // Espera aleatoria entre 1 y 5 segundos
@@ -34,7 +35,7 @@ public class WeatherStation implements Subject, Runnable {
                 Thread.sleep(delay);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
-                System.out.println("WeatherStation interrumpida");
+                System.out.println("WeatherStation interrupted");
             }
         }
     }

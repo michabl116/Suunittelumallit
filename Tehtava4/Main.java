@@ -4,9 +4,9 @@ public class Main {
     public static void main(String[] args) {
         WeatherStation station = new WeatherStation();
 
-        Observer display1 = new WeatherDisplay("Pantalla Norte");
-        Observer display2 = new WeatherDisplay("Pantalla Sur");
-        Observer display3 = new WeatherDisplay("Pantalla Este");
+        Observer display1 = new WeatherDisplay("display1");
+        Observer display2 = new WeatherDisplay("display2");
+        Observer display3 = new WeatherDisplay("display3");
 
         station.addObserver(display1);
         station.addObserver(display2);
@@ -23,7 +23,7 @@ public class Main {
         }
 
         // Elimina un observador
-        System.out.println("\n--- Pantalla Sur ha sido eliminada ---\n");
+        System.out.println("\n--- Display2 is delete ---\n");
         station.removeObserver(display2);
 
         // Simula otros 15 segundos
@@ -35,6 +35,6 @@ public class Main {
 
         // Detiene la estación
         station.stop();
-        System.out.println("\nSimulación finalizada.");
+        System.out.println("\nEnd simulation.");
     }
 }
