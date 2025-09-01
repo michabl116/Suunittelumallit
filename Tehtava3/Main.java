@@ -21,7 +21,7 @@ public class Main {
 
         root.add(hr);
         root.add(it);
-        root.add(new Employee("CEO", 150000));
+        root.add(new Employee("lili", 150000));
 
         System.out.println("Total Salary: $" + root.getSalary());
         System.out.println("\nOrganizational Structure in XML:\n");
