@@ -4,10 +4,12 @@ package Tehtava6;
 public class XMLPrinter extends PrinterDecorator {
 
     public XMLPrinter(Printer printer) {
+
         super(printer);
     }
 
     private String toXML(String message) {
+
         return "<message>" + message + "</message>";
     }
 

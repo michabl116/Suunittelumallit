@@ -7,7 +7,7 @@ public class Main {
         Printer printer2 = new EncryptedPrinter(
                 new XMLPrinter(
                         new BasicPrinter()));
-        printer2.print("Hello World!");
+        //printer2.print("Hello World!");
     }
 }
 
