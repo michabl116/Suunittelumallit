@@ -1,20 +1,32 @@
-package main.java.Tehtava17;
-
-
+package Tehtava17;
 
 import javafx.scene.image.Image;
 import java.util.HashMap;
 import java.util.Map;
 
 public class TileGraphicFactory {
-    private static final Map<String, TileType> cache = new HashMap<>();
+    private static final Map<String, TileGraphic> cache = new HashMap<>();
 
-    public static TileType getTileType(String name, String imagePath) {
-        if (!cache.containsKey(name)) {
-            Image img = new Image(imagePath);
-            cache.put(name, new TileType(name, img));
+    public static TileGraphic getTileGraphic(String type) {
+        if (!cache.containsKey(type)) {
+            Image image = loadImageForType(type);
+            char character = getCharacterForType(type);
+            cache.put(type, new TileGraphic(type, character, image));
         }
-        return cache.get(name);
+        return cache.get(type);
+    }
+
+    private static Image loadImageForType(String type) {
+        return new Image(TileGraphicFactory.class.getResource("/assets/" + type + ".png").toExternalForm());
+    }
+
+    private static char getCharacterForType(String type) {
+        return switch (type) {
+            case "grass" -> '.';
+            case "water" -> '~';
+            case "mountain" -> '^';
+            case "road" -> '#';
+            default -> '?';
+        };
     }
 }
-
