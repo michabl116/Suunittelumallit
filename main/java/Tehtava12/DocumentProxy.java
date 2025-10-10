@@ -1,7 +1,5 @@
 package Tehtava12;
 
-import java.io.Serializable;
-
 public class DocumentProxy implements DocumentInt {
     private Document realDoc;
     private boolean isProtected;
