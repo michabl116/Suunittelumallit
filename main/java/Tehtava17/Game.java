@@ -15,6 +15,7 @@ public class Game extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+
         ChoiceDialog<String> dialog = new ChoiceDialog<>("C", List.of("C", "W"));
         dialog.setTitle("Map Selection");
         dialog.setHeaderText("Choose your map type");
@@ -32,6 +33,7 @@ public class Game extends Application {
         int tileSize = 32;
 
         Map map = createMap(type, rows, cols);
+        map.display();
 
         Canvas canvas = new Canvas(cols * tileSize, rows * tileSize);
         GraphicsContext gc = canvas.getGraphicsContext2D();

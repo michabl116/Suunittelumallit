@@ -17,7 +17,8 @@ public class TileGraphicFactory {
     }
 
     private static Image loadImageForType(String type) {
-        return new Image(TileGraphicFactory.class.getResource("/assets/" + type + ".png").toExternalForm());
+        return new Image(TileGraphicFactory.class.getResource("/" + type + ".png").toExternalForm());
+
     }
 
     private static char getCharacterForType(String type) {

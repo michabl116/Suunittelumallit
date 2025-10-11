@@ -3,12 +3,16 @@ package Tehtava17;
 import javafx.scene.canvas.GraphicsContext;
 
 public abstract class Map {
-    TileInstance[][] tiles;
+    protected TileInstance[][] tiles;
 
     public Map(int rows, int cols) {
         tiles = new TileInstance[rows][cols];
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
+        // No inicialices aquí
+    }
+
+    public void initializeTiles() {
+        for (int i = 0; i < tiles.length; i++) {
+            for (int j = 0; j < tiles[i].length; j++) {
                 String type = getRandomTileType();
                 TileGraphic graphic = TileGraphicFactory.getTileGraphic(type);
                 tiles[i][j] = new TileInstance(j, i, graphic);
@@ -17,6 +21,7 @@ public abstract class Map {
     }
 
     protected abstract String getRandomTileType();
+
 
     public void display() {
         for (TileInstance[] row : tiles) {

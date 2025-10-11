@@ -7,6 +7,7 @@ public class CityMap extends Map {
 
     public CityMap(int rows, int cols) {
         super(rows, cols);
+        initializeTiles(); // ✅ Aquí ya está listo rand
     }
 
     @Override
@@ -14,3 +15,4 @@ public class CityMap extends Map {
         return rand.nextInt(2) == 0 ? "road" : "grass";
     }
 }
+
